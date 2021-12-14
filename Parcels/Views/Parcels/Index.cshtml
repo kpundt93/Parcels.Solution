@@ -1,3 +1,5 @@
+@using Shipping.Models;
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +7,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
-  <h1>Parcels To Go</h1>
-  <a href='/parcels/new'>Check the price for shipping a parcel</a><br>
-  </div>
-
+<div class="container">
+  <h1>Welcome to Parcels To Go</h1>
+  <p>The price to ship your parcel is $@Parcel.CostToShip().</p><br>
+  <a href='/'>Back Home</href>
+</div>
 </body>
 
 </html>

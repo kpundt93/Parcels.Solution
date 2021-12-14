@@ -4,9 +4,9 @@ namespace Shipping.Models
 {
   public class Parcel
   {
-    public double Width { get; set; }
-    public double Height { get; set; }
-    public double Weight { get; set; }
+    public static double Width { get; set; }
+    public static double Height { get; set; }
+    public static double Weight { get; set; }
 
     public Parcel (double width, double height, double weight)
     {
@@ -15,13 +15,13 @@ namespace Shipping.Models
       Weight = weight;
     }
 
-    public double Volume()
+    public static double Volume()
     {
       double dimensions = Width * Height;
       return dimensions;
     }
 
-    public double CostToShip()
+    public static double CostToShip()
     {
       double cost;
       if (Weight > 0 && Weight <= 5.00)
